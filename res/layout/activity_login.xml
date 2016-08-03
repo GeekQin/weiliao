@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myapp="http://schemas.android.com/apk/res/com.Dinggrn.weiliao"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+     >
+
+    <include
+        android:id="@+id/headerview"
+        layout="@layout/header_layout" />
+    <ImageView 
+        android:id="@+id/iv_login_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headerview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/login_logo"
+        />
+	<LinearLayout 
+	    android:id="@+id/ll_login_container"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/iv_login_logo"
+	    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:background="@drawable/input_bg"
+        android:orientation="vertical"
+	    >
+	    <com.Dinggrn.weiliao.view.MyEditText
+                android:id="@+id/et_uname"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/login_edit_normal"
+                android:drawableLeft="@drawable/user_icon"
+                android:drawablePadding="8dp"
+                android:hint="用户名..."
+                android:drawableRight="@drawable/close"
+                android:singleLine="true"
+                android:textSize="14sp" />
+	    <com.Dinggrn.weiliao.view.MyEditText
+                android:id="@+id/et_upwd"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/login_edit_normal"
+                android:drawableLeft="@drawable/pwd_icon"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/close"
+                android:ems="10"
+                android:hint="请输入密码"
+                android:password="true"
+                android:textSize="14sp" >
+            </com.Dinggrn.weiliao.view.MyEditText>
+           
+	</LinearLayout>
+	 
+
+	<com.dd.CircularProgressButton
+        android:id="@+id/btn_login_login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/ll_login_container"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:textSize="16sp" 
+        android:gravity="center"
+        myapp:cpb_textIdle="登  录"
+        myapp:cpb_iconError="@drawable/ic_cpb_action_cancel"
+        myapp:cpb_iconComplete="@drawable/ic_cpb_action_accept"
+        />
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_login_login"
+        android:paddingTop="20dp"
+        android:layout_marginBottom="@dimen/usual_margin"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="没有账号 ?"
+            android:textColor="@color/gray"
+            android:textSize="16sp"
+            android:textStyle="italic" 
+            android:layout_marginRight="@dimen/usual_margin_half"/>
+
+        <TextView
+            android:id="@+id/tv_login_regist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="抢注一个吧！"
+            android:textColor="#FF0000"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+    </LinearLayout>
+	<TextView
+	     android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="更多..."
+        android:paddingBottom="10dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="@dimen/usual_margin"
+        android:gravity="center_horizontal" 
+        android:visibility="invisible"
+	    />
+</RelativeLayout>

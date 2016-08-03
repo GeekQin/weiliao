@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.Dinggrn.weiliao"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="horizontal" 
+    android:descendantFocusability="blocksDescendants"
+    >
+
+    <com.Dinggrn.weiliao.view.CircleImageView
+        android:id="@+id/iv_item_addfriend_avatar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_item_addfrined_usernmae"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="XXXXXX"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical" >
+
+        <com.dd.CircularProgressButton
+            android:id="@+id/btn_item_addfriend_add"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:background="@drawable/btn_blue_selector"
+            android:textColor="#ffffffff"
+            android:focusable="false"
+            app:cpb_iconComplete="@drawable/ic_cpb_action_accept"
+            app:cpb_iconError="@drawable/ic_cpb_action_cancel"
+            app:cpb_textIdle="添加" 
+            />
+
+        <TextView
+            android:id="@+id/tv_item_addfriend_added"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:text="已添加"
+            android:textSize="14sp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myapp="http://schemas.android.com/apk/res/com.Dinggrn.weiliao"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <include 
+        android:id="@+id/headerview"
+        layout="@layout/headerview_layout"
+        />
+	<RelativeLayout 
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"	    
+	    >
+	    
+	    <ListView 
+	        android:id="@+id/lv_friend_frineds"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        ></ListView>
+		<TextView 
+		    android:id="@+id/tv_friend_letter"
+		    android:layout_width="100dp"
+		    android:layout_height="100sp"
+		    android:background="@drawable/roundcorner_bg"
+		    android:text="A"
+		    android:textSize="60sp"
+		    android:layout_centerInParent="true"
+		    android:gravity="center"
+		    android:visibility="invisible"
+		    />    
+	    <com.Dinggrn.weiliao.view.MyLetterView
+	        android:id="@+id/mlv_friend_letters"
+	        android:layout_width="50dp"
+	        android:layout_height="match_parent"
+	        myapp:text_size = "14sp"
+	        myapp:text_color = "#ff000000"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="5dp"
+	        />
+	     <!-- <include 
+            android:id="@+id/menuview"
+            layout="@layout/menu_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" -->
+            
+            />
+	</RelativeLayout>
+</LinearLayout>

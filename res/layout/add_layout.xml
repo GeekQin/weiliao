@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:orientation="horizontal" 
+    android:weightSum="4"
+    >
+
+    <TextView
+        android:id="@+id/tv_picloc_takepic"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/tv_chat_add_picture_selector"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="图片" />
+
+    <TextView
+        android:id="@+id/tv_picloc_makephoto"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/tv_chat_add_camera_selector"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="拍照" />
+
+    <TextView
+        android:id="@+id/tv_picloc_location"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/tv_chat_add_location_selector"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="位置" />
+
+</LinearLayout>

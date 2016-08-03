@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:orientation="vertical" 
+    xmlns:app="http://schemas.android.com/apk/res/com.Dinggrn.weiliao">
+    
+    <TextView 
+        android:id="@+id/tv_item_friend_index"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/lightgray"
+        android:paddingLeft="10dp"
+        android:text="A"
+        android:textSize="14sp"
+        android:gravity="center_vertical"
+        />
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+        
+        <com.tarena.catmessge.view.CircleImageView 
+            android:id="@+id/iv_item_friend_avatar"
+            android:layout_width="60dp" 
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_launcher"
+            />
+        <TextView 
+            android:id="@+id/tv_item_frined_usernmae"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="XXXXXX"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
+
+</LinearLayout>

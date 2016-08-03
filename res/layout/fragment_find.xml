@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/headerview"
+        layout="@layout/headerview_layout" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/plv_find_fragment_blogs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        
+        
+        <RelativeLayout 
+            android:id="@+id/rl_find_fragment_photoviewcontainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="30dp"
+            android:visibility="invisible"
+            >
+            
+            <uk.co.senab.photoview.PhotoView
+                android:id="@+id/pv_find_fragment_photoview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_launcher"
+                android:scaleType="fitCenter"
+                android:layout_margin="20dp"
+                ></uk.co.senab.photoview.PhotoView>
+            
+            <ImageView 
+                android:id="@+id/iv_find_fragment_closephotoview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_delete"
+                />
+            
+            
+        </RelativeLayout>
+        
+        
+        
+        
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_find_fragment_commentcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#ffe8e8e8"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="gone" >
+
+        <EditText
+            android:id="@+id/et_find_fragment_comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:hint="您的神评论..."
+            android:maxLines="2"
+            android:paddingLeft="5dp"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_find_fragment_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_chat_send_selector" />
+    </LinearLayout>
+
+</LinearLayout>

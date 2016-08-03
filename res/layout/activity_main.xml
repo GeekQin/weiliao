@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res/com.Dinggrn.weiliao"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <com.Dinggrn.weiliao.view.MyViewPager
+        android:id="@+id/vp_main_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </com.Dinggrn.weiliao.view.MyViewPager>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/top_bg" >
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <com.Dinggrn.weiliao.view.MyTabIcon
+                android:id="@+id/myicon_main_message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:icon_color="#ff00ff00"
+                app:icon_icon="@drawable/tab_icon_message"
+                app:icon_textcontent="消息"
+                app:icon_textsize="12sp" />
+            
+            <com.Dinggrn.weiliao.view.BadgeView 
+                android:id="@+id/bv_main_messageunread"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <com.Dinggrn.weiliao.view.MyTabIcon
+                android:id="@+id/myicon_main_friend"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:icon_color="#ff00ff00"
+                app:icon_icon="@drawable/tab_icon_contact"
+                app:icon_textcontent="好友"
+                app:icon_textsize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_main_newfriend_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/ic_new_msg_tips"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+        <com.Dinggrn.weiliao.view.MyTabIcon
+            android:id="@+id/myicon_main_find"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:icon_color="#ff00ff00"
+            app:icon_icon="@drawable/tab_icon_find"
+            app:icon_textcontent="圈子"
+            app:icon_textsize="12sp" />
+
+        <com.Dinggrn.weiliao.view.MyTabIcon
+            android:id="@+id/myicon_main_setting"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:icon_color="#ff00ff00"
+            app:icon_icon="@drawable/iv_feedback"
+            app:icon_textcontent="设置"
+            app:icon_textsize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>
